@@ -9440,9 +9440,9 @@ function sleep(ms) {
     const activityResults = {};
     for(let idx = 0; idx< repositories.length; idx++) {
       if (idx == 2500) {
-        (0,core_1.debug)('Sleep time starts to get reset the API rate limit');
-        yield sleep(3660000);
-        (0,core_1.debug)('Sleep time ends');
+        console.log("Sleep time starts to get reset the API rate limit");
+        await sleep(3660000);
+        console.log("Sleep time ends to get reset the API rate limit");
       }	    
       const repoActivity = await self.repositoryClient.getActivity(repositories[idx], since);
       Object.assign(activityResults, repoActivity);
