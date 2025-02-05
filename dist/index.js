@@ -9426,9 +9426,6 @@ module.exports = class OrganizationUserActivity {
     return this._repositoryActivity;
   }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));  
-}
 
   async getUserActivity(org, since) {
     const self = this;
@@ -9468,6 +9465,10 @@ function sleep(ms) {
   }
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));  
+}
+	
 function generateUserActivityData(data) {
   if (!data) {
     return null
