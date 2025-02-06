@@ -9436,7 +9436,7 @@ module.exports = class OrganizationUserActivity {
 
     const activityResults = {};
     let repolimit = 2500;	
-    for(let idx = 0; idx< 2500; idx++) {
+    for(let idx = 2500; idx< repositories.length; idx++) {
       // if (idx == 2500) {
       //   console.log("Sleep time starts to get reset the API rate limit");
       //   await sleep(600000);
