@@ -9438,7 +9438,7 @@ module.exports = class OrganizationUserActivity {
     for(let idx = 0; idx< repositories.length; idx++) {
       if (idx == 2500) {
         console.log("Sleep time starts to get reset the API rate limit");
-        await sleep(3660000);
+        await sleep(600000);
         console.log("Sleep time ends to get reset the API rate limit");
       }	    
       const repoActivity = await self.repositoryClient.getActivity(repositories[idx], since);
